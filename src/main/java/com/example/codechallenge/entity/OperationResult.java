@@ -36,7 +36,7 @@ public abstract class OperationResult {
         return operator1;
     }
 
-    public int getOperator2() {
+    public Integer getOperator2() {
         if( operator2 == null)
             return 0;
         return operator2;

@@ -4,6 +4,7 @@ import com.example.codechallenge.entity.OperationResult;
 import com.example.codechallenge.repository.OperationResultRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.data.domain.Sort;
 
 import java.util.*;
 
@@ -18,6 +19,6 @@ public class OperationServices {
     }
 
     public List<OperationResult> getOperations() {
-        return operationRepository.findAll();
+        return operationRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
     }
 }
